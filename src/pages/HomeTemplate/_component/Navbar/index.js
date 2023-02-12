@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { NavLink } from "react-router-dom";
 export default class NavbarHome extends Component {
   render() {
     return (
@@ -11,19 +11,19 @@ export default class NavbarHome extends Component {
         {/* Links */}
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="/">
               Phim
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="/cinema">
               Các Cụm Rạp
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="/contact">
               Liên Hệ
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
