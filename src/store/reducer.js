@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-
-const rootReducer = combineReducers({});
+import dataUserReducer from "../pages/AdminTemplate/User/duck/reducer";
+const rootReducer = combineReducers({ dataUserReducer });
 
 export default rootReducer;

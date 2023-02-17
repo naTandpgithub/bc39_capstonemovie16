@@ -41,12 +41,9 @@ const renderRoutes = () => {
       return (
         <Route key={route.path} path={route.path} element={<route.element />}>
           {route.nested.map((item) => {
+            let NewItem = item.element;
             return (
-              <Route
-                key={item.path}
-                path={item.path}
-                element={<item.element />}
-              />
+              <Route key={item.path} path={item.path} element={<NewItem />} />
             );
           })}
         </Route>

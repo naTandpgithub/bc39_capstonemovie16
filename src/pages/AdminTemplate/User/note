@@ -1,0 +1,44 @@
+// import React, { Component } from "react";
+
+// import RenderUser from "./renderUser";
+// import { connect } from "react-redux";
+// import renderUserApi from "./duck/action";
+// import Loader from "../../../component/Loader";
+// class Users extends Component {
+//   renderDataUser = () => {
+//     const { data, loading } = this.props;
+//     console.log(this.props);
+//     if (loading) return <Loader />;
+
+//     return data?.map((user) => {
+//       return <RenderUser key={user.taiKhoan} user={user} />;
+//     });
+//   };
+
+//   componentDidMount() {
+//     this.props.fetchData();
+//   }
+
+//   render() {
+//     return (
+//       <div className="container">
+//         <RenderUser />
+//       </div>
+//     );
+//   }
+// }
+
+// const mapStateToProps = (state) => {
+//   return {
+//     loading: state.dataUserReducer.loading,
+//     data: state.dataUserReducer.data,
+//   };
+// };
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     fetchData: () => {
+//       dispatch(renderUserApi());
+//     },
+//   };
+// };
+// export default connect(mapStateToProps, mapDispatchToProps)(Users);
