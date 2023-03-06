@@ -7,6 +7,7 @@ export const AddUserApi = (user) => {
       .post("QuanLyNguoiDung/ThemNguoiDung", user)
       .then((result) => {
         dispatch(AddUserSuccess(result.data.content));
+        alert("Thêm Thành Công");
       })
       .catch((error) => {
         alert(error.content);

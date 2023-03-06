@@ -15,6 +15,9 @@ export default function AddUser({ renderUser }) {
     maLoaiNguoiDung: "KhachHang",
   });
   // console.log(state);
+
+  console.log("213123123");
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setState({
@@ -40,7 +43,7 @@ export default function AddUser({ renderUser }) {
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <form onSubmit={handleOnSubmit}>
+      <form onSubmit={handleOnSubmit} className="text-dark">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
@@ -62,6 +65,15 @@ export default function AddUser({ renderUser }) {
                 <input
                   type="text"
                   name="taiKhoan"
+                  className="form-control"
+                  onChange={handleOnChange}
+                />
+              </div>
+              <div className="form-group">
+                <label> Mật Khẩu </label>
+                <input
+                  type="text"
+                  name="matKhau"
                   className="form-control"
                   onChange={handleOnChange}
                 />
