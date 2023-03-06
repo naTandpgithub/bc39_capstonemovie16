@@ -7,10 +7,14 @@ export default class AdminNav extends Component {
     return (
       <ul>
         <li>
-          <NavLink to="/admin/films">Upload Film</NavLink>
+          <NavLink to="/admin/films">Film</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/admin/newfilms">Update Film</NavLink>
         </li>
         <li>
-          <NavLink to="/admin/users">Add User</NavLink>
+          <NavLink to="/admin/users"> User</NavLink>
         </li>
       </ul>
     );

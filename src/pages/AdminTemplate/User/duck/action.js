@@ -3,12 +3,13 @@ import api from "./../../../../utils/apiUtil";
 
 const renderUserApi = () => {
   return (dispatch) => {
-    // dispatch(renderUserRequest());
+    dispatch(renderUserRequest());
     api
-      .get("/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP15")
+      .get("QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP15")
       .then((result) => {
         dispatch(renderUserSucess(result.data.content));
-        console.log(result.data.content);
+        // console.log(result.data.content);
+        // setListUser(result.data.content);
       })
       .catch((error) => {
         dispatch(renderUserFail(error));

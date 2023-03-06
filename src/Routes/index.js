@@ -28,10 +28,23 @@ const routes = [
         element: lazy(() => import("./../pages/AdminTemplate/Film")),
       },
       {
+        path: "newfilms",
+        element: lazy(() => import("./../pages/AdminTemplate/Film/newFilm")),
+      },
+      {
+        path: "newfilm",
+        element: lazy(() => import("./../pages/AdminTemplate/Film")),
+      },
+
+      {
         path: "users",
         element: lazy(() => import("./../pages/AdminTemplate/User")),
       },
     ],
+  },
+  {
+    path: "auth",
+    element: lazy(() => import("./../pages/AdminTemplate/AuthPage")),
   },
 ];
 
