@@ -10,8 +10,9 @@ import actDeleteUserApi from "./renderUser/Delete/duck/action";
 import actEditUserApi from "./renderUser/EditUser/duck/action";
 
 export default function User() {
-  const loading = useSelector((state) => state.dataUserReducer.loading);
-  const data = useSelector((state) => state.dataUserReducer.data);
+  const loading = useSelector((state) => state.dataUserAdminReducer.loading);
+  // console.log(loading);
+  const data = useSelector((state) => state.dataUserAdminReducer.data);
   // if (data) console.log(data[0]);
   const [deletetUser, setDeletetUser] = useState("");
   const [searchtUser, setSearchUser] = useState("");
@@ -25,10 +26,12 @@ export default function User() {
   // useEffect(() => {
   //   dispatch(renderUserApi());
   // }, []);
-  if (loading) return <Loader />;
+  // if (loading) return <Loader />;
   const renderDataUser = () => {
+    // console.log(data?.hoTen);
     const dataFilter = data?.filter((data) => {
-      return data.hoTen.indexOf(searchtUser) !== -1;
+      console.log(data.hoTen);
+      return data?.hoTen.toLowerCase().indexOf(searchtUser) !== -1;
     });
 
     console.log(dataFilter);

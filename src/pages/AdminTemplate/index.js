@@ -26,7 +26,16 @@ export default class AdminTemplate extends Component {
             <AdminNav />
           </Sider>
           <Layout>
-            <Header style={{ backgroundColor: "yellow" }}>Header</Header>
+            <Header style={{ backgroundColor: "yellow" }}>
+              <button
+                onClick={() => {
+                  localStorage.clear();
+                  window.location = "/auth";
+                }}
+              >
+                Logout
+              </button>
+            </Header>
             <Content>
               <Outlet />
             </Content>

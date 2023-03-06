@@ -22,7 +22,12 @@ export default function Film() {
 
   if (loading) return <Loader />;
   const renderFilm = () => {
-    return data?.map((film) => {
+    const filmFilter = data?.filter((film) => {
+      console.log(film.tenPhim);
+      return film?.tenPhim.toLowerCase().indexOf(searchFilm) !== -1;
+    });
+
+    return filmFilter?.map((film) => {
       return (
         <RenderFilm
           key={film.maPhim}

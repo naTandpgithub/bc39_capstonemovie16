@@ -5,7 +5,7 @@ const initialState = {
   error: null,
 };
 
-const dataUserReducer = (state = initialState, action) => {
+const dataUserAdminReducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionTypes.GET_DATA_USER_REQUEST: {
       state.loading = true;
@@ -31,4 +31,4 @@ const dataUserReducer = (state = initialState, action) => {
   }
 };
 
-export default dataUserReducer;
+export default dataUserAdminReducer;
