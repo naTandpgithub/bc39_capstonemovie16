@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    @include styleText($fs-1, $fw-1, $color-white-3);
+    background-color: #26262d;
+    overflow-x: hidden;
+    .force-overflow {
+    min-height: 450px;
+}
+}
+
+.section {
+    padding: $pd-5 $pd-7 0;
+    align-items: center;
+}
+
+.section-title {
+    margin-bottom: $mg-2;
+    text-align: center;
+    @include styleText($fs-8 , $fw-2, $color-section-title);
+    letter-spacing: 1;
+};
+
+
+@include responsive("extra-small"){
+    .section {
+            padding: 40px 0px
+        }
+    .section-title{
+        margin-bottom: 0px;
+        font-size: 35px;
+    }
+};
+
+@include responsive("small-down") {
+    .section {
+        padding: 30px 0px
+    }
+
+    .section-title {
+        margin-bottom: 0px;
+        font-size: 30px;
+    }
+}
