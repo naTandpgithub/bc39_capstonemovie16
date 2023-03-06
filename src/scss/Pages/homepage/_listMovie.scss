@@ -1,0 +1,99 @@
+.listMovie_tab{
+        display: flex;
+        justify-content: center;
+        .nav-tabs {
+                justify-content: center;
+                align-items: center;
+                border-bottom: none;
+                margin-bottom: $mg-3;
+                width: 40%;
+        
+                li {
+                    width: 50%;
+                    text-align: center;
+                    a.nav-link {
+                        border: none;
+                        @include styleText($fs-5,$fw-2,$color-white-3);
+                        transition: all 0.5s;
+                        padding: 0;
+                        &:hover {
+                               
+                                    @include styleText($fs-6, $fw-3, $color-white-3);
+                               
+                            }
+                    }
+                    a.nav-link.active{
+                        background-color: transparent;
+                        border: none;
+                        @include styleText($fs-6, $fw-3, red);
+                    }
+                }
+        
+            }
+    }
+   
+    .listmovie {   
+            .ListMovieItem {    
+                padding: 0 5px;
+                background-color: transparent;
+                
+        }
+    }
+    button.btn-light{
+        text-align: center;
+    }
+
+
+@include responsive("extra-large"){
+    .listMovie_tab{
+        .nav-tabs{
+            margin-bottom: 50px;
+        }
+    }
+};
+@include responsive("large") {
+    .listMovie_tab {
+        .nav-tabs {
+            margin-bottom: 50px;
+            width: 70%;
+            li {
+                    a.nav-link {
+                        font-size: $fs-10;
+
+                        &:hover {
+                            font-size: $fs-13;
+                        }
+                    }
+
+                    ;
+
+                    a.nav-link.active {
+                        font-size: $fs-13;
+                    }
+                }
+        }
+    }
+}
+
+@include responsive("medium") {
+    .listMovie_tab {
+        .nav-tabs {
+            width: 80%;
+            li {    
+                a.nav-link {
+                    font-size: 1.3rem;
+
+                    &:hover {
+                        font-size: $fs-3;
+                    }
+                }
+
+                ;
+
+                a.nav-link.active {
+                    font-size: $fs-3;
+                }
+            }
+        }
+    }
+}

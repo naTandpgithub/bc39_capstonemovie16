@@ -1,0 +1,39 @@
+#userRegister{
+    .card-body {
+            input {
+                margin: 0 auto 25px
+            }
+        }
+    
+        ;
+                 .card-footer {
+                     text-align: center;
+        
+                     button {
+                         border: 1px solid #fff;
+                         margin-right: 5px;
+                     }
+        
+                     p {
+                         @include styleText($fs-11, $fw-1, $color-yellow-1);
+                         text-align: right;
+                         margin-bottom: 0;
+                     }
+        
+                     a {
+                         @include styleText($fs-2, $fw-1, $color-blue-2 );
+                         text-align: left;
+        
+                     }
+                 }
+};
+
+@include responsive("medium"){
+    .card-body {
+        .card-footer{
+            button.btn-light {
+                    padding: 15px 40px
+                }
+        }
+}
+}
