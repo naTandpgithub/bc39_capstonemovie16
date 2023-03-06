@@ -1,0 +1,44 @@
+#userLogin{
+    .card-body{
+        input{
+            margin:0 auto 16px
+        }
+        .text-danger{text-align: center}
+    };
+    .card-footer{
+        text-align: center;
+        button{
+            border: 1px solid #fff;
+            margin-right: 5px;
+        }
+        div{
+            line-height: 1;
+            padding: 0 auto
+        }
+        p{
+            @include styleText($fs-11,$fw-1,$color-yellow-1);
+            text-align: right;
+            margin-bottom: 0;
+        }
+        a{@include styleText($fs-2, $fw-1, $color-blue-2    );
+            text-align: left;
+
+        }
+    }
+};
+
+@include responsive("medium") {
+    .card-footer {
+            button.btn-light {
+                padding: 15px 40px
+            }
+        }
+}
+
+@include responsive("small"){
+    .card-footer {
+            button.btn-light {
+                padding: 10px 25px;
+            }
+        }
+}

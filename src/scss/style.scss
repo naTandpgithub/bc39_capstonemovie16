@@ -1,0 +1,28 @@
+// Helpers
+@import "./Helpers/variable";
+@import "./Helpers/mixin";
+
+
+// Base
+@import "./Base/reset";
+
+// Components
+@import "./Components/buttons";
+@import "./Components/input";
+@import "./Components/card";
+
+// Layouts
+@import "./Layouts/navbar";
+@import "./Layouts/footer";
+
+// Pages
+// @import "./Pages/homepage/";
+// @import "./Pages/detailpage/";
+// @import "./Pages/ticketroompage/";
+@import "./Pages/userLogin/userLogin";
+@import "./Pages/userRegister/userRegister";
+@import "./Pages/homepage/carousel";
+@import "./Pages/homepage/listMovie";
+@import"./Pages/homepage/cinema";
+@import "./Pages/detailpage/detail";
+@import "./Pages/ticketroompage/ticketroom"

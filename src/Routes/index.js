@@ -10,12 +10,24 @@ const routes = [
         element: lazy(() => import("./../pages/HomeTemplate/HomePage")),
       },
       {
-        path: "cinema",
-        element: lazy(() => import("./../pages/HomeTemplate/Cinema")),
+        path: "login",
+        element: lazy(() => import("./../pages/HomeTemplate/UserLogin")),
       },
       {
-        path: "contact",
-        element: lazy(() => import("./../pages/HomeTemplate/Contact")),
+        path: "register",
+        element: lazy(() => import("./../pages/HomeTemplate/UserRegister")),
+      },
+      {
+        path: "detail/:id",
+        element: lazy(() => import("./../pages/HomeTemplate/DetailMovie")),
+      },
+      {
+        path: "ticketroom/:id",
+        element: lazy(() => import("./../pages/HomeTemplate/Ticketroom")),
+      },
+      {
+        path: "infoUser",
+        element: lazy(() => import("./../pages/HomeTemplate/InfoUser")),
       },
     ],
   },

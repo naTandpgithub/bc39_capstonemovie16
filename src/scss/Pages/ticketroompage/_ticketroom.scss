@@ -1,0 +1,56 @@
+#ticketroom{
+    .screen{
+        background-color: rgb(38, 38, 94);
+        p{
+        text-align: center;
+        @include styleText($fs-3,$fw-1,$color-white-3)
+    }
+    }
+    .modal_seat{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .seat{
+            width: 60%;
+            display: block;
+            margin: auto;
+            &:focus{
+                outline: 0;
+            }
+            p{
+                margin: 0;
+                    padding: 20px;
+                    @include styleText($fs-2, $fw-1, $color-dark-6)
+            }
+        }
+    
+    }
+    .list_seats{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .seat{
+            width: 10%;
+            p{ margin: 0;
+                padding: 20px;
+                @include styleText($fs-11, $fw-1, $color-dark-6)
+            }
+                          &:focus {
+                              outline: none;
+                          }
+        }
+    }
+         .info_main {
+             h1 {
+                 @include styleText($fs-6, $fw-2, $color-white-3);
+             }
+    
+             p {
+                 @include styleText($fs-11, $fw-1, #adadad);
+                 padding: 10px 0;
+                 border-bottom: 1px solid;
+             }
+         }
+}
+

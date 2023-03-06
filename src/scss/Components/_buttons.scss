@@ -1,0 +1,14 @@
+.btn-light {
+    @include styleButton(linear-gradient(120deg, #ffffff80 0%, #ffffff09 51%, #ffffff80 100%), $pd-3 + 2.5, $pd-7, none, $bd-2, $ls-2);
+    @include styleText($fs-2, $fw-2, $color-white-3);
+    transition: .5s;
+    background-size: 200%;
+    text-decoration: none;
+
+    &:hover {
+        @include styleText($fs-2, $fw-3, #646464);
+        background-position: right center;
+        text-decoration: none;
+    }
+}
+
